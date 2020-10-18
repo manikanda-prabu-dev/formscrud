@@ -16,4 +16,11 @@ export class UserComponent implements OnInit {
   logout(){
     this.router.navigate(["login"]);
   }
+
+  gotoview(){
+    this.router.navigate(["viewform"]);
+  }
+  uploadFile(s){
+    console.log();
+  }
 }

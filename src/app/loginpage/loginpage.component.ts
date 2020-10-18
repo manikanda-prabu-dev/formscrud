@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginpageComponent implements OnInit {
 
-  username: string;
+  email: string;
   password: string;
 
   constructor(private router: Router,private toastr: ToastrService) { }
@@ -20,7 +20,7 @@ export class LoginpageComponent implements OnInit {
 
   login(){
 
-    if (this.username == 'admin' &&  this.password == 'admin') {
+    if (this.email == 'admin' &&  this.password == 'admin') {
       this.router.navigate(["user"]);
       this.toastr.success('loggedin sucessfully');
     }else {

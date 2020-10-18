@@ -1,0 +1,39 @@
+<div class="row">
+  <button (click)="onDisplayModeChange(2)"><i class="fa fa-bars"></i> List</button>
+  <button (click)="onDisplayModeChange(1)"><i class="fa fa-th-large"></i> Grid</button>
+</div>
+<!-- <button type="submit" class="btn btn-primary logout" (click)="logout()">Logout</button> -->
+
+<!-- <div class="container"> -->
+<div class="row" *ngIf="displayMode === 1">
+  <div class="col-lg-6 col-md-6 col-sm-6 " *ngFor="let detail of details">
+    <!-- <div > -->
+    <!-- <div class="row"> -->
+    <div class="col-lg-6 col-md-6 col-sm-12 col-6">
+      <div class="card" style="margin-bottom: 10px;">
+        <div class="card-body">
+          <h3>Firstname{{detail.catalogue_name | uppercase}}</h3>
+          <h3>Lastname{{detail.createdOn}}</h3>
+          <h3>Email{{detail.catalogue_name | uppercase}}</h3>
+          <h3>Image{{detail.createdOn}}</h3>
+          <h3>Id{{detail.catalogue_name | uppercase}}</h3>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary logout">
+        update</button>
+      <button type="submit" class="btn btn-primary logout"><i class="fa fa-trash"></i>delete</button>
+      <!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+
+<div *ngIf="displayMode === 2">
+  <div *ngFor="let detail of details">
+    <ul class="list-group">
+      <li class="list-group-item disabled">{{detail.catalogue_name | uppercase}}</li>
+      <li class="list-group-item">CreatedOn:{{detail.createdOn}}</li>
+      <li class="list-group-item">CreatedOn:{{detail.createdOn}}</li>
+    </ul>
+  </div>
+  <!-- </div> -->
